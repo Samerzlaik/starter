@@ -1,0 +1,28 @@
+Create new Laravel project:
+xampp\htdocs or wamp\www
+ right click -> git bash here
+In git:
+>Laravel new projectName
+Or
+>composer create-project laravel/laravel projectName "6.*"
+“6.*” is Laravel wanted version
+
+>composer config -g repo.packagist composer https://packagist.org
+ It forces composer to use https to download all resources
+
+>Composer install
+Install all packages in composer.json
+>php artisan serv
+run the project to open in browser
+
+php artisan make:controller FirstController
+php artisan route:list
+php artisan make:controller controllerName --resource
+composer require laravel/ui
+php artisan ui vue --auth
+npm install && npm run dev
+
+php artisan migrate
+note: to solve [varchar(191) not null] error, go to app->Providoers->AppServiceProvider.php and add Schema::defaultStringLength(191); to boot function
+
+php artisan dump-autoload (run after each change in .env file
